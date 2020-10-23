@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainBG"
+    tools:context=".VideoItemDetailActivity"
+    tools:showIn="@layout/activity_videoitem_list"
+    android:gravity="bottom">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trending Videos"
+        android:id="@+id/textView"
+        android:layout_gravity="top|center_horizontal" />
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bg_video_item_list"
+        android:name="com.kardelenapp.downtuber.VideoItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".VideoItemListActivity"
+        tools:layout="@android:layout/list_content" />
+
+</LinearLayout>

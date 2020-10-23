@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:popupTheme="@style/DownTuberActionbarTheme"
+        android:theme="@style/DownTuberActionbarTheme"
+        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/admobLay"
+        android:layout_below="@+id/toolbar"
+        android:gravity="top|center_vertical|fill_vertical">
+
+        <include layout="@layout/main_bg" />
+
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/videoitem_list"
+            android:name="com.kardelenapp.downtuber.VideoItemListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".VideoItemListActivity"
+            tools:layout="@android:layout/list_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admobLay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/adMobView"
+
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:gravity="center_vertical|center_horizontal"
+            >
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
